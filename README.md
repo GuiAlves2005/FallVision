@@ -35,3 +35,6 @@ Design Amigável: A interface do LCD exibe mensagens claras, informando instanta
 Notificações de Queda: Além da detecção de movimento, o FallVision também pode ser configurado para alertar em caso de quedas, proporcionando uma camada adicional de segurança.
 
 O FallVision é mais do que um simples sistema de detecção de movimento; é uma solução abrangente para a segurança e o bem-estar dos seus entes queridos mais velhos.
+
+# Link wokwi
+https://wokwi.com/projects/382142759912675329
