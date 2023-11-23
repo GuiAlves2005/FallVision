@@ -1,0 +1,47 @@
+#include <Wire.h>
+#include <LiquidCrystal_I2C.h>
+
+LiquidCrystal_I2C lcd(0x27, 16, 2);  
+const int ledPin = 26;  
+
+void setup() {
+  Serial.begin(115200);
+  pinMode(4, INPUT_PULLUP);
+  pinMode(ledPin, OUTPUT);
+
+  Wire.begin(21, 22);  
+  lcd.begin(16, 2);    
+  lcd.backlight();     
+  lcd.clear();         
+}
+
+void loop() {
+  int motionSensor = digitalRead(4);
+  Serial.println(motionSensor);
+
+  if (motionSensor == HIGH) {
+    Serial.println("Movimento Detectado");
+
+    lcd.clear();
+    lcd.setCursor(0, 0);
+    lcd.print("Alerta: ");
+     lcd.setCursor(0, 1);
+    lcd.print("Movimento ");
+
+    digitalWrite(ledPin, HIGH);
+  }
+  if (motionSensor == LOW) {
+    Serial.println("Nenhum Movimento Detectado");
+
+    lcd.clear();
+    lcd.setCursor(0, 0);
+    lcd.print("Tudo Ok:");
+    lcd.setCursor(0, 1);
+    lcd.print("Sem Movimento");
+
+
+    digitalWrite(ledPin, LOW);
+  }
+
+  delay(1000);
+}
