@@ -38,3 +38,6 @@ O FallVision é mais do que um simples sistema de detecção de movimento; é um
 
 # Link wokwi
 https://wokwi.com/projects/382142759912675329
+
+## Guilherme Alves de Lima RM 550433
+## Bruno Venturi Lopes Vieira RM 99431
